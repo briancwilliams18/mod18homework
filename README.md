@@ -9,7 +9,7 @@ an API for a social network web application where users can share their thoughts
 - [Questions](#questions)
 
 ## Tests
-Test in insomina, find the walkthrough video here: 
+Test in insomina, find the walkthrough video here: https://drive.google.com/file/d/1eBVcQSb9lM1R2g_aaRGwi0crW9adXKcU/view
 
 ## License
 This project is licensed under the MIT license.
