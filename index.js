@@ -176,7 +176,7 @@ app.delete('/api/thoughts/:thoughtId/reactions/:reactionId', async (req, res) =>
 });
 
 // Start the server
-mongoose.connect('mongodb://localhost:27017', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://127.0.0.1:27017/social_network_db', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(PORT, () => {
