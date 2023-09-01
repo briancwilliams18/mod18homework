@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const { DateTime } = require('luxon'); // Import Luxon for date formatting
+const { DateTime } = require('luxon');
+const ReactionSchema = require('./Reaction'); // Import the ReactionSchema
 
 const thoughtSchema = new mongoose.Schema({
   thoughtText: {
@@ -17,10 +18,9 @@ const thoughtSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  reactions: [ReactionSchema], // Assuming you've defined ReactionSchema
+  reactions: [ReactionSchema], // Use the imported ReactionSchema
 });
 
-// Create a virtual field for reactionCount
 thoughtSchema.virtual('reactionCount').get(function() {
   return this.reactions.length;
 });
@@ -28,3 +28,4 @@ thoughtSchema.virtual('reactionCount').get(function() {
 const Thought = mongoose.model('Thought', thoughtSchema);
 
 module.exports = Thought;
+    
